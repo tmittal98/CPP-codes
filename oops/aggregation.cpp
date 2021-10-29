@@ -22,9 +22,30 @@ class Address{
 
 class Employee{
     
-}
+    public:
+        int id;
+        string name;
+        Address address;
+        Employee(int id,string name,Address addr){
+            this->id;
+            this->name;
+            this->address = addr;
+        }
 
+        void display(){
+            cout << "The Employee ID is " << id << endl;
+            cout << "The Employee Name is " << name << endl;
+            cout << "The Employee Address is " << endl;
+            cout << "The city name " << address.city << endl;
+            cout << "The state name " << address.state << endl;
+            cout << "The country name " << address.country<< endl;
+            cout << "The pincode name " << address.pincode<< endl;
+        }
+};
 
 int main(){
+    Address addr("Kolkata", "WB", "India", 712222);
+    Employee emp(129, "Tushar",addr);
+    emp.display();
     return 0;
 }
